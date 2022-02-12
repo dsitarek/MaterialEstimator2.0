@@ -10,4 +10,13 @@ const getMaterialTypes = async () => {
   return matsCall.data;
 };
 
+// const createOrder = async (order) => {
+//   const data = await supabase
+//     .from('line_combinations')
+//     .insert([
+//       ...order.orderList,
+//     ]);
+//   return data;
+// };
+
 export default getMaterialTypes;
