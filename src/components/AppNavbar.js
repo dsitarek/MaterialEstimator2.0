@@ -31,6 +31,9 @@ const AppNavbar = () => {
             <NavItem>
               <NavLink href="/"><span className="nav-span">Home</span></NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/Orders"><span className="nav-span">Orders</span></NavLink>
+            </NavItem>
             {user ? (
               <>
                 <UncontrolledDropdown nav inNavbar className="user-drop">

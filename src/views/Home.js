@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import MaterialRow from '../components/MaterialRow';
-import getMaterialTypes from '../data/dbCalls';
+import { getMaterialTypes, createOrder } from '../data/dbCalls';
 
 export default function Home() {
   const [formInput, setFormInput] = useState({ materialLine: '', toMetric: true, jobNumberInput: '' });
@@ -51,13 +51,15 @@ export default function Home() {
   };
 
   const submitOrder = (materialTable) => {
-    const order = {
-      jobNumber: formInput.jobNumberInput,
-      date: new Date().toLocaleDateString(),
-      orderList: materialTable,
-    };
+    const order = [];
 
-    console.log(order);
+    Object.values(materialTable).forEach((line) => order.push({
+      ...line,
+      jobNumber: formInput.jobNumberInput,
+      date: new Date(),
+    }));
+
+    createOrder(order);
   };
 
   return (
