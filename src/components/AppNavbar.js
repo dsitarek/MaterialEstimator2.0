@@ -24,7 +24,7 @@ const AppNavbar = () => {
   return (
     <div className="navbar-container">
       <Navbar light expand="md" className="navbar">
-        <NavbarBrand href="/">ME</NavbarBrand>
+        <NavbarBrand href="/">Material Estimator</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="container-fluid" navbar>

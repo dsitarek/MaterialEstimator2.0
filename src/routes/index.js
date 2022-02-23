@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Home from '../views/Home';
 import JobOrders from '../views/JobOrders';
-import OrderView from '../views/OrderView';
+import OrderView from '../components/OrderView';
 
 export default function Routes() {
   return (

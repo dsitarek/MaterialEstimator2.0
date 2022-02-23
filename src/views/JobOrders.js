@@ -10,6 +10,6 @@ export default function JobOrders() {
   }, []);
 
   return (
-    <div>{orders.map((order) => <JobOrder key={order} jobNumber={order} />)}</div>
+    <div className="job-orders-container">{orders.map((order) => <JobOrder key={order} jobNumber={order} />)}</div>
   );
 }

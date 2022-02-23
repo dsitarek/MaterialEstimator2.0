@@ -2,5 +2,96 @@
 @import 'globals';
 
 body {
-  background-color: $favColor !important;
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.job-orders-container {
+  display: flex;
+  justify-content: center;
+}
+
+.job-calculation-continer {
+  border: 1px transparent;
+  margin: 1em;
+  padding: 1em;
+  flex-basis: 25%;
+  border-radius: 3px;
+  background-color: rgba(145, 145, 145, 0.253);
+}
+
+.navbar {
+  background-color: #4483f1a8;
+  height: 3.5em;
+}
+
+.nav-span {
+  color: white;
+  font-family: Bauer, Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  padding: 1em .5em 0 .5em;
+  line-height: 1.75em;
+  text-shadow: 1px 1px 1px black;
+}
+
+.login-btn-container {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  margin: 0 1em 0 auto;
+}
+
+.user-drop {
+  margin: 0 1em 0 auto;
+}
+
+.user-img {
+  border: 1px transparent;
+  border-radius: 100px;
+  width: 2em;
+  margin-right: .5em;
+}
+
+.estimation-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+}
+
+.estimation-form-container {
+display: flex;
+}
+
+.material-container {
+
+}
+
+.material-input{
+
+}
+
+.material-table-container {
+  margin: 1em;
+}
+
+.material-table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin: 1em 0 1em 0;
+  min-width: 100%;
+}
+
+.material-table-header {
+  font-weight: bold;
+  border: 1px solid black;
+  padding: .1em .25em .1em .25em;
+  text-align: center;
+  background-color: #89888bce;
+  min-width: 7em;
+}
+
+.material-table-data {
+  border: 1px solid black;
+  text-align: center;
+  background-color: aliceblue;
 }

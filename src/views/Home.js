@@ -63,26 +63,28 @@ export default function Home() {
   };
 
   return (
-    <div className="search-container">
-      <form onSubmit={(e) => submitLengthsAndQuantities(e, formInput.materialLine)} className="material-entry-form-container">
-        <input type="text" name="materialLine" placeholder="Enter Lengths and Quantities" className="input" value={formInput.materialLine} onChange={handleChange} tabIndex="0" />
-        <input type="checkbox" name="toMetric" checked={formInput.toMetric} onChange={handleCheckbox} />
-        <button className="btn-primary material-input-btn" type="submit">Submit</button>
-      </form>
-      {materials.matObjArr
+    <div className="estimation-container">
+      <div className="estimation-form-container">
+        <form onSubmit={(e) => submitLengthsAndQuantities(e, formInput.materialLine)} className="material-entry-form-container">
+          <textarea rows="2" cols="100" name="materialLine" placeholder="Enter Lengths and Quantities" className="material-input" value={formInput.materialLine} onChange={handleChange} tabIndex="0" />
+          <input type="checkbox" name="toMetric" checked={formInput.toMetric} onChange={handleCheckbox} />
+          <button className="btn-primary material-input-btn" type="submit">Submit</button>
+        </form>
+      </div>
+      {materials.matObjArr.length > 0
         ? (
           <div className="material-container">
             <div className="material-table-container">
-              <table>
+              <table className="material-table">
                 <thead>
                   <tr>
-                    <th>
+                    <th className="material-table-header">
                       Length
                     </th>
-                    <th>
+                    <th className="material-table-header">
                       Quantity
                     </th>
-                    <th>
+                    <th className="material-table-header">
                       Material
                     </th>
                   </tr>

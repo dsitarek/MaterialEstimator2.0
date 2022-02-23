@@ -6,7 +6,7 @@ export default function MaterialRow({
   material, index, setMaterialsOrder, materialTypes,
 }) {
   const [formInput, setFormInput] = useState({
-    materialPN: '3842992425', bundleQty: 20, stickLength: 243, vendor: 'Bosch', bundlePartNumber: '3842553612', description: 'Bosch 45x45L',
+    materialPN: '3 842 553 618', bundleQty: 20, stickLength: 243, vendor: 'Bosch', bundlePartNumber: '3 842 553 611', description: '45x45L',
   });
 
   const handleChange = (e) => {
@@ -18,7 +18,6 @@ export default function MaterialRow({
       description: e.target[e.target.selectedIndex].dataset.description,
       bundlePartNumber: e.target[e.target.selectedIndex].dataset.bundlepartnumber,
     }));
-    console.log(e.target[e.target.selectedIndex].dataset.bundleqty);
   };
 
   useEffect(() => {
@@ -35,14 +34,14 @@ export default function MaterialRow({
   return (
     <>
       <tr>
-        <th>
+        <th className="material-table-data">
           {material.matLength}&#34;
         </th>
-        <th>
+        <th className="material-table-data">
           {material.matQuantity}
         </th>
-        <th>
-          <select id="materialPN" name="materialPN" value={formInput.MaterialPN} aria-labelledby="material-pn" onChange={handleChange}>
+        <th className="material-table-data">
+          <select id="materialPN" name="materialPN" value={formInput.materialPN} aria-labelledby="material-pn" onChange={handleChange}>
             {materialTypes.map((mat) => (
               <option
                 key={mat.PartNumber}
