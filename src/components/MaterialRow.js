@@ -6,7 +6,7 @@ export default function MaterialRow({
   material, index, setMaterialsOrder, materialTypes,
 }) {
   const [formInput, setFormInput] = useState({
-    materialPN: '3842992425', bundleQty: 20, stickLength: 243, vendor: 'Bosch', bundlePartNumber: '3842553612',
+    materialPN: '3842992425', bundleQty: 20, stickLength: 243, vendor: 'Bosch', bundlePartNumber: '3842553612', description: 'Bosch 45x45L',
   });
 
   const handleChange = (e) => {
@@ -15,6 +15,7 @@ export default function MaterialRow({
       bundleQty: Number(e.target[e.target.selectedIndex].dataset.bundleqty),
       stickLength: Number(e.target[e.target.selectedIndex].dataset.sticklength),
       vendor: e.target[e.target.selectedIndex].dataset.vendor,
+      description: e.target[e.target.selectedIndex].dataset.description,
       bundlePartNumber: e.target[e.target.selectedIndex].dataset.bundlepartnumber,
     }));
     console.log(e.target[e.target.selectedIndex].dataset.bundleqty);
@@ -50,6 +51,7 @@ export default function MaterialRow({
                 data-vendor={mat.Vendor}
                 data-sticklength={mat.StickLength}
                 data-bundleqty={mat.BundleQty}
+                data-description={mat.Description}
               >{mat.Description}
               </option>
             ))}
